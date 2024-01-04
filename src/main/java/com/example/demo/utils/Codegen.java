@@ -4,6 +4,8 @@ import com.mybatisflex.codegen.Generator;
 import com.mybatisflex.codegen.config.ColumnConfig;
 import com.mybatisflex.codegen.config.GlobalConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
+import org.springframework.web.servlet.view.freemarker.FreeMarkerConfig;
 
 public class Codegen {
 
@@ -47,6 +49,8 @@ public class Codegen {
         globalConfig.setServiceImplGenerateEnable(true);
         //设置生成controller
         globalConfig.setControllerGenerateEnable(true);
+        globalConfig.getTemplateConfig()
+                .setController("/templates/enjoy/controller.tpl");
 
         //可以单独配置某个列
 //        ColumnConfig columnConfig = new ColumnConfig();
