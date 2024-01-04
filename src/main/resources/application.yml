@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.10.28:3306/demo?characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver #mysql8以上选带cj的，5版本选不带cj的
+    username: root
+    password: zhl123
